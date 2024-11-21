@@ -15,18 +15,18 @@ public class PasswordValidator {
 
 
 
-        /*if (password.strip().length() < 10) {
+        if (password.strip().length() < 10) {
             return false;
-        }*/
+        }
 
 
         for (char c : password.toCharArray()) {
             if (Character.isUpperCase(c)) hasUpperCase = true;
             if (Character.isLowerCase(c)) hasLowerCase = true;
-            //if (numberList.contains(c)) hasNumber = true;
+            if (numberList.contains(c)) hasNumber = true;
 
             // If both conditions are met, the password is valid
-            if (hasUpperCase && hasLowerCase /*&& hasNumber*/) return true;
+            if (hasUpperCase && hasLowerCase && hasNumber) return true;
         }
         return false;
     }
